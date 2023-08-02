@@ -1,0 +1,36 @@
+//------------------------Decimal to binary representation--------------------
+
+//Question: Given a decimal number, print its binary representation.
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class BinaryRepresentation {
+
+    public static void printBinaryRepresentation(int number) {
+        ArrayList<Integer> binaryList = new ArrayList<>();
+
+        if (number == 0) {
+            binaryList.add(0);
+        } else {
+            while (number > 0) {
+                int remainder = number % 2;
+                binaryList.add(remainder);
+                number = number / 2;
+            }
+        }
+
+        Collections.reverse(binaryList);
+
+        System.out.print("Binary representation of " + number + ": ");
+        for (int digit : binaryList) {
+            System.out.print(digit);
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int binaryNumber = 101010; // Replace this with your desired binary number
+        printBinaryRepresentation(binaryNumber);
+    }
+}
