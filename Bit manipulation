@@ -49,3 +49,20 @@ class Unique_Number {
         System.out.print(uniqueNum);
     }
 }
+
+//-------------------------------ith bit set or not------------------------
+
+//Question: Given an number N, check if ith bit is set in that number
+
+class Set_Or_Not {
+    public static void main(String[] args) {
+        int binaryNumber = 100101;
+        int i = 2;
+        int mask = 1<<i;
+        if((binaryNumber & mask) >0){
+            System.out.print("The ith bit is set");
+        }else{
+            System.out.print("The ith bit is unset");
+        }
+    }
+}
